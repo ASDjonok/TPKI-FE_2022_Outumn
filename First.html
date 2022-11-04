@@ -5,11 +5,62 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <meta name="description" content="Наша перша перевірена сторінка на 100%.">
+        <style>
+            h2 {
+                color: red;
+            }
+            .note2 {
+                color: chartreuse;
+            }
+            .note {
+                color: blue;
+                padding-left:10px ;
+                margin-left:10px ;
+            }
+            .note:hover {
+                color: black;
+            }
+            /*todo try to see in browser as user if content is empty*/
+            .note:before {
+                content: "test";
+                background-color: black;
+                width: 10px;
+                height: 10px;
+            }
+            .note:after {
+                content: "test2";
+                color: black;
+                width: 10px;
+                height: 10px;
+            }
+            /*h2.note.note1 {
+                color: grey;
+            }*/
+            /*h2.note {
+                color: white;
+            }*/
+            /*main>h2 {
+                color: blueviolet;
+            }
+            main h2 {
+                color: aqua;
+            }*/
+
+            /*todo try to check why Specificity of 10 classes + 1 element less than 1 identifier*/
+            /*Specificity = 11*/
+            /*h2.note.note1.note2.note3.note4.note5.note6.note7.note8.note9.note10 {
+                color: orange;
+            }*/
+            /*Specificity = 100*/
+            /*#myId {
+                color: green;
+            }*/
+        </style>
     </head>
-	<body>
+	<body style="margin: 0px;">
         <header>
             <div style="display: flex; align-items: flex-start;">
-<!--                todo logo click-->
+                <!--                todo logo click-->
                 <a href="/FE/First.html">
                     <img src="logo.ico" alt="Logo" style="width: 20px; height: 20px;">
                 </a>
@@ -19,20 +70,56 @@
                 </nav>
             </div>
         </header>
-        <h1>Hello world!</h1>
-        <h1>Привіт, Світе!</h1>
+        <h2 id="myId2" class="note note1 note2 note3 note4 note5 note6 note7 note8 note9 note10">
+            <!--                style="color: pink">-->
+            My text level 2
+        </h2>
+        <main style="min-height: calc(100vh - (24px + 5px + 60.2px + 5px));">
+            <h1 style="margin: 5px;">Hello world!</h1>
+            <h1 style="margin: 5px;">Привіт, Світе!</h1>
+<!--            <div>-->
+                <h2 id="myId" class="note note1 note2 note3 note4 note5 note6 note7 note8 note9 note10">
+                    <!--                style="color: pink">-->
+                    My text level 2
+                </h2>
+<!--            </div>-->
+        </main>
+        <footer style="background: black">
+            <ul style="margin: 5px;">
+                <li><a href="/FE/First.html">Home</a></li>
+                <li><a href="/FE/Contacts.html">Contacts</a></li>
+            </ul>
+            <span style="color: white">Copyright ©2022</span>
+        </footer>
+        <!--<header>
+            <div style="display: flex; align-items: flex-start;">
+&lt;!&ndash;                todo logo click&ndash;&gt;
+                <a href="/FE/First.html">
+                    <img src="logo.ico" alt="Logo" style="width: 20px; height: 20px;">
+                </a>
+                <nav style="padding-left: 10px;">
+                    <a href="/FE/First.html">Home</a>
+                    <a href="/FE/Contacts.html" style="margin-left: 3px;">Contacts</a>
+                </nav>
+            </div>
+        </header>-->
+<!--        todo min-height-->
+        <!--<main style="height: calc(100vh - 8px - 24px - 71.2px)">
+            <h1>Hello world!</h1>
+            <h1>Привіт, Світе!</h1>
+        </main>-->
     <!-- todo form for registration -->
 
     <!-- todo fix footer -->
     <!--    1) бути знизу  -->
     <!--    2) не перекривати контент  -->
     <!--    3) якщо контентку багато, то футер знизу всього контенту, а не знизу сторінки  -->
-        <footer style="background: black">
+        <!--<footer style="background: black">
             <ul>
                 <li><a href="/FE/First.html">Home</a></li>
                 <li><a href="/FE/Contacts.html">Contacts</a></li>
             </ul>
             <span style="color: white">Copyright ©2022</span>
-        </footer>
+        </footer>-->
     </body>
 </html>
